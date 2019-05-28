@@ -11,7 +11,7 @@
 	<input type="text" name="id" placeholder="아이디를 입력하세요"/>
 	<input type="password" name="pw" placeholder="비밀번호를 입력하세요"/>
 	<input type="text" name="name" placeholder="이름을 입력하세요"/>
-	<input type="text" name="email" placeholder="이메일을 입력하세요10"/>
+	<input type="text" name="email" placeholder="이메일을 입력하세요12"/>
 	<button>가입하기</button>
 </form>
 </body>
