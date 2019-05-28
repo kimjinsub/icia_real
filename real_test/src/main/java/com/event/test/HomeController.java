@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Handles requests for the application home page.
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+	ModelAndView mav;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -36,4 +37,14 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/joinFrm", method = RequestMethod.GET)
+	public String joinFrm() {
+		return "joinFrm";
+	}
+	
+	@RequestMapping(value = "/memberInsert", method = RequestMethod.GET)
+	public ModelAndView memberInsert() {
+		mav=new ModelAndView();
+		return mav;
+	}
 }
