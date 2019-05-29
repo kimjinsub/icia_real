@@ -46,6 +46,7 @@ public class HomeController {
 	public ModelAndView memberInsert() {
 		mav=new ModelAndView();
 		System.out.println("test1");
+		System.out.println("test2");
 		return mav;
 	}
 }
