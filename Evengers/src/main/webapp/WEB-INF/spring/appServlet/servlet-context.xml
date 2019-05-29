@@ -18,6 +18,7 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/WEB-INF/views/**" location="/img/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -25,7 +26,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.event.test" />
+	<context:component-scan base-package="com.event.evengers" />
 	
 	<beans:bean id="dataSource" 
 				class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -43,7 +44,7 @@
 				class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource"/>
 		<beans:property name="configLocation"
-						value="classpath:com/event/test/dao/mybatis-conf.xml"/>
+						value="classpath:com/event/evengers/dao/mybatis-conf.xml"/>
 		<beans:property name="mapperLocations"
 						value="classpath:com/**/mapper/*.xml"/>
 	</beans:bean>
@@ -52,6 +53,6 @@
 		<beans:property name="sqlSessionFactory"
 						ref="sqlSessionFactory"/>
 		<beans:property name="mapperInterface"
-						value="com.event.test.dao.MemberDao"/>
+						value="com.event.evengers.dao.MemberDao"/>
 	</beans:bean>
 </beans:beans>
