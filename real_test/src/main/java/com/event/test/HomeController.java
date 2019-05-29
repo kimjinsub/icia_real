@@ -45,6 +45,7 @@ public class HomeController {
 	@RequestMapping(value = "/memberInsert", method = RequestMethod.GET)
 	public ModelAndView memberInsert() {
 		mav=new ModelAndView();
+		System.out.println("test1");
 		return mav;
 	}
 }
